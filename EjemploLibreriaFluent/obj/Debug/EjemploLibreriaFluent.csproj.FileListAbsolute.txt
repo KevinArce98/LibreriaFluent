@@ -1,1 +1,2 @@
 C:\Users\Kevin Arias\Documents\Visual Studio 2015\Projects\EjemploLibreriaFluent\EjemploLibreriaFluent\bin\Debug\EjemploLibreriaFluent.exe.config
+E:\expoFluent\LibreriaFluent\EjemploLibreriaFluent\bin\Debug\EjemploLibreriaFluent.exe.config
