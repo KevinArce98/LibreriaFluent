@@ -35,8 +35,7 @@ namespace EjemploLibreriaFluent.Vistas
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
-        {
-            
+        {          
             frmEditarLibros oEdita = new frmEditarLibros();
             oEdita.ShowDialog();
         }
