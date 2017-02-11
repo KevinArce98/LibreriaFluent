@@ -38,7 +38,7 @@
             // tblAutores
             // 
             this.tblAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblAutores.Location = new System.Drawing.Point(23, 40);
+            this.tblAutores.Location = new System.Drawing.Point(27, 49);
             this.tblAutores.Name = "tblAutores";
             this.tblAutores.Size = new System.Drawing.Size(548, 303);
             this.tblAutores.TabIndex = 11;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EjemploLibreriaFluent.Logica;
+using EjemploLibreriaFluent.Vistas.VistasEdicion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,28 @@ namespace EjemploLibreriaFluent.Vistas
         public frmLibros()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmEditarLibros oEdita = new frmEditarLibros();
+            oEdita.ShowDialog();
+            if (oEdita.IsAceptar == true)
+            {
+            
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            
+            frmEditarLibros oEdita = new frmEditarLibros();
+            oEdita.ShowDialog();
         }
     }
 }

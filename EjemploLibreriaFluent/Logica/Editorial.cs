@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjemploLibreriaFluent.Logica
 {
-    class Editorial
+    public class Editorial
     {
         private int codigo;
         private string nombre;
