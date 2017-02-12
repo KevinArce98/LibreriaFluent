@@ -11,47 +11,40 @@ using System.Windows.Forms;
 
 namespace EjemploLibreriaFluent.Vistas.VistasEdicion
 {
-    public partial class frmEditarAutor : Form
+    public partial class frmEditarEditorial : Form
     {
         private bool aceptar;
-        private Autor autor;
-        public frmEditarAutor()
+        private Editorial oEditorial;
+
+        public frmEditarEditorial()
         {
             InitializeComponent();
             this.CenterToScreen();
             aceptar = false;
-            autor = new Autor();
-        }
-        public frmEditarAutor(Autor pAutor)
-        {
-            InitializeComponent();
-            this.CenterToScreen();
-            aceptar = false;
-            autor = pAutor;
+            oEditorial = new Editorial();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        public frmEditarEditorial(Editorial pEditorial)
         {
-            if (txtCodigo.Text.Equals("") || txtNombre.Text.Equals("") || txtApellido.Text.Equals("")
-                || txtNacionalidad.Text.Equals(""))
-            {
-                MessageBox.Show("Ingrese los datos solicitados", "Error", MessageBoxButtons.OK);
-            }
-            else
-            {
-                autor.Nombre = txtNombre.Text;
-                autor.Apellido = txtApellido.Text;
-                autor.Nacionalidad = txtNacionalidad.Text;
-                autor.Codigo = int.Parse(txtCodigo.Text);
-                this.aceptar = true;
-                this.Close();
-            }
+            InitializeComponent();
+            this.CenterToScreen();
+            aceptar = false;
+            oEditorial = pEditorial;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            oEditorial.Codigo = int.Parse(txtCodigo.Text);
+            oEditorial.Nombre = txtNombre.Text;
+            this.aceptar = true;
+            this.Close();
+        }
+
         public bool Aceptar
         {
             get
@@ -65,16 +58,16 @@ namespace EjemploLibreriaFluent.Vistas.VistasEdicion
             }
         }
 
-        public Autor Autor
+        public Editorial OEditorial
         {
             get
             {
-                return autor;
+                return oEditorial;
             }
 
             set
             {
-                autor = value;
+                oEditorial = value;
             }
         }
 

@@ -16,6 +16,7 @@ namespace EjemploLibreriaFluent
         public Form1()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void btnLibro_Click(object sender, EventArgs e)

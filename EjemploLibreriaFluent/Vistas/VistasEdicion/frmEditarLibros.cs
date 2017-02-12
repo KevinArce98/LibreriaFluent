@@ -11,12 +11,14 @@ namespace EjemploLibreriaFluent.Vistas.VistasEdicion
         public frmEditarLibros()
         {
             InitializeComponent();
+            this.CenterToScreen();
             this.aceptar = false;
             libro = new Libro();
         }
         public frmEditarLibros(Libro pLibro)
         {
             InitializeComponent();
+            this.CenterToScreen();
             this.aceptar = false;
             libro = pLibro;
         }
@@ -64,6 +66,26 @@ namespace EjemploLibreriaFluent.Vistas.VistasEdicion
             set
             {
                 libro = value;
+            }
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Solo se puede digitar numeros
+            char caracter = e.KeyChar;
+            if (((caracter < '0') || (caracter > '9')))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAnio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Solo se puede digitar numeros
+            char caracter = e.KeyChar;
+            if (((caracter < '0') || (caracter > '9')))
+            {
+                e.Handled = true;
             }
         }
     }
