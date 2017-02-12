@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EjemploLibreriaFluent.Vistas.VistasEdicion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace EjemploLibreriaFluent.Vistas
         public frmEditorial()
         {
             InitializeComponent();
+            this.CenterToScreen();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmEditarEditorial oEdita = new frmEditarEditorial();
+            oEdita.ShowDialog();
+            if (oEdita.Aceptar == true)
+            {
+
+            }
         }
     }
 }

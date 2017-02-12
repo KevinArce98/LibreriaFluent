@@ -16,6 +16,7 @@ namespace EjemploLibreriaFluent.Vistas
         public frmAutor()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
